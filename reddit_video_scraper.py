@@ -155,7 +155,7 @@ class RedditVideoScraper:
         audio_tmp = download_details['audio_tmp']
         video_id  = download_details['video_id']
 
-        final_video_name = f'DescargarBot_{video_id}.mp4'
+        final_video_name = f'{video_id}.mp4'
 
         if download_details['is_gif'] == False:
             ffmpeg_cmd = f'ffmpeg -hide_banner -loglevel panic -y -i "{video_tmp}" -i "{audio_tmp}" -vcodec copy -acodec copy "{final_video_name}"'
